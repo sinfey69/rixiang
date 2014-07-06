@@ -1,0 +1,21 @@
+    <div class="sb_nav">
+		<?php
+		$ttcatid = $arrparentid[count($arrparentid)-1];
+		if(!$ttcatid)
+		{
+			if($top_parentid)
+				$ttcatid = $top_parentid;	//单页面
+			else
+				$ttcatid = $catid;			//普通分类
+		}
+		?>
+			<h3 class='title'><a href='{$CATEGORYS[$ttcatid][url]}'>{$CATEGORYS[$ttcatid][catname]}</a></h3>
+			{pc:content action="category" catid="$CATEGORYS[$ttcatid][catid]" num="6" siteid="$siteid" order="listorder ASC"}
+			<div class="active" id="sidebar" data-csnow="2" data-class3="0" data-jsok="1">
+			{loop $data $r}
+				<dl class="list-none navnow"><dt id='part2_10' {if $catid==$r[catid]}class="on"{/if}><a href='{$r[url]}'  title='{$r[catname]}' class="zm"><span>{$r[catname]}</span></a></dt></dl>
+			{/loop}
+			<div class="clear"></div>
+			</div>
+			{/pc}
+    </div>

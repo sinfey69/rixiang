@@ -1,21 +1,21 @@
 {template "content","header"}
-<!--main-->
-<div class="main photo-channel">
-<div class="crumbs"><a href="{siteurl($siteid)}">首页</a><span> > {catpos($catid)}</div>
-<div class="bk10"></div>
-	{pc:content action="lists" catid="$catid" num="10" order="id DESC" page="$page"}
-		<ul class="photo-list picbig">
+{template "content","banner"}
+<div class="sidebar inner">
+  	{template "content","left"}
+    <div class="sb_box" >
+	      	<div class="clear"></div>
+
+        <div class="active" id="productlist">
+			<ul class='list-none metlist'>
+			{pc:content action="lists" catid="$catid" num="10" order="id DESC" page="$page"}
 			{loop $data $r}
-			<li>
-			<div class="img-wrap">
-			<a href="{$r[url]}"><img src="{thumb($r[thumb],150,112)}" width="150" height="112" alt="{$r[title]}"/></a>
-			</div>
-			<span style="color:{$r[style]}">{str_cut($r[title],28)}</span>
-			</li>
+			<li class='list' style='width:220px; margin-left:22px; margin-right:22px;'><a href='{$r[url]}' title='{$r[title]}' target='_self' class='img'><img src='{thumb($r[thumb],150,450)}' alt='{$r[title]}' title='{$r[title]}' width='50' height='150' /></a><h3><a href='{$r[url]}' title='{$r[title]}' target='_self'>{$r[title]}</a></h3></li>
 			{/loop}
-		</ul>
+			{/pc}
+		<div class="clear"></div>
+		</div>
 		<div id="pages" class="text-c">{$pages}</div>
-	{/pc}
     </div>
+    <div class="clear"></div>
 </div>
 {template "content","footer"}

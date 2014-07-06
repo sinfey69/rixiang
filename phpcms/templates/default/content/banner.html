@@ -1,0 +1,10 @@
+<div class="inner met_flash"><div class="flash">
+	{pc:get sql="SELECT * FROM rx_picture_data WHERE id=5"}
+		{loop $data $val}
+		<?php eval("\$pics = ".$val[pictureurls].";");?>
+		<?php foreach($pics as $pic){?>
+		<img src='{$pic[url]}' width='972' alt='' height='300'></div></div>
+		<?php }?>
+		{/loop}
+	{/pc}
+

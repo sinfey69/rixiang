@@ -1,20 +1,28 @@
-{template "content","header_page"}
-<div id="content">
-	<div class="col-left left-nav">
-    	<h1>关于我们</h1>
-    	<ul class="content">
-        	{loop $arrchild_arr $cid}
-                <li{if $catid==$cid} class="cur"{/if}><a href="{$CATEGORYS[$cid][url]}">{$CATEGORYS[$cid][catname]}</a></li>
-			{/loop}
-        </ul>
-        <div class="bottom"></div>
+{template "content","header"}
+{template "content","banner"}
+<div class="sidebar inner">
+	<div class="sb_nav">
+			<h3 class='title'>福建日翔</h3>
+			<div class="active" id="sidebar" data-csnow="2" data-class3="0" data-jsok="1">
+				<dl class="list-none navnow"><dt id='part2_10' class="on">{$title}</dt></dl>
+			<div class="clear"></div>
+			</div>
     </div>
-  <div class="col-auto">
-    	<img src="{IMG_PATH}v9/about_ad.png" width="659" height="171" />
-    	<h1 class="title">{$title}</h1>
-        <div class="content">
-        	    {$content}
+    <div class="sb_box" >
+	      	<div class="clear"></div>
+
+        <div class="active" id="shownews">
+            <h1 class="title">{$title}</h1>
+            <div class="editor">
+            <div>
+			{$content}
+			<div id="metinfo_additional"></div>
+			</div>
+			<div class="clear"></div>
+			</div>
         </div>
-    </div>
- </div>
+	</div>	
+    <div class="clear"></div>
+</div>
+<script language="JavaScript" src="{APP_PATH}api.php?op=count&id={$id}&modelid={$modelid}"></script>
 {template "content","footer"}
