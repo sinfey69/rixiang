@@ -32,7 +32,7 @@
         <div class="top-nav"><a href='#' onclick='SetHome(this,window.location,"非IE浏览器不支持此功能，请手动设置！");' style='cursor:pointer;' title='设为首页'  >设为首页</a><span>-</span><a href='#' onclick='addFavorite("非IE浏览器不支持此功能，请手动设置！");' style='cursor:pointer;' title='收藏本站'  >收藏本站</a></div> 
         <nav><ul class="list-none">
         <li id="nav_10001"  class='navdown'><a href='{siteurl($siteid)}' title='网站首页' class='nav'><span>网站首页</span></a></li>
-        {pc:content action="category" catid="0" num="6" siteid="$siteid" order="listorder ASC"}
+        {pc:content action="category" catid="0" num="8" siteid="$siteid" order="listorder ASC"}
         {loop $data $r}
         <li class="line"></li><li id='nav_1'  ><a href='{$r[url]}'  title='{$r[catname]}' class='hover-none nav'><span>{$r[catname]}</span></a></li>
         {/loop}

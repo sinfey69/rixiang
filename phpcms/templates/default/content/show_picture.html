@@ -31,7 +31,7 @@ $('#view_bigimg').attr('href',mgrc);
 <script type='text/javascript'>	window.onload==setupZoom();	</script>
 <div class='smallimg' style='width:527px;'>
 {loop $pictureurls $pic_k $r}
-<span class='spic'><a href='javascript:;' onclick=metseeBig('smallimg1','{thumb($r[url], 50, 50, 0)}') title='{$r[alt]}' style='cursor:pointer'><img border='0'  id='smallimg1' src='{$r[url]}' width='50' height='50' alt='{$r[alt]}' title='{$r[alt]}' ></a></span>
+<span class='spic'><a href='javascript:;' onclick=metseeBig('smallimg{$pic_k}','{$r[url]}') title='{$r[alt]}' style='cursor:pointer'><img border='0'  id='smallimg{$pic_k}' src='{$r[url]}' width='50' height='50' alt='{$r[alt]}' title='{$r[alt]}' ></a></span>
 {/loop}
 </div>
 </dt>

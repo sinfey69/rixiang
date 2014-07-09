@@ -3,9 +3,9 @@
 return array (
 	'default' => array (
 		'hostname' => 'localhost',
-		'database' => 'rixiang',
-		'username' => 'root',
-		'password' => '',
+		'database' => 'uu166556',
+		'username' => 'uu166556',
+		'password' => 'g4tH0rfk',
 		'tablepre' => 'rx_',
 		'charset' => 'utf8',
 		'type' => 'mysql',

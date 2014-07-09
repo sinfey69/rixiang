@@ -70,7 +70,7 @@ document.write('</object>');
 		<div class="right dg fl" style="width:306px;">
                          <h3 class="title"><a class="index_tit" href="http://www.rixiang-fj.com/list-8-1.html" title="Products">Products</a><a href="http://www.rixiang-fj.com/list-8-1.html" title="Products"><span>产品展示</span></a></h3>
                          <dl class="product">
-				{pc:content action="lists" catid="8" num="3" siteid="$siteid" order="listorder ASC"}
+				{pc:content action="lists" catid="8" num="3" siteid="$siteid" order="listorder DESC, id DESC"}
 				{loop $data $r}
                                  <dd class="product_list">
                                          <a href="{$r[url]}" class="imgWidth" taget="_blank" title="{$r[title]}"><img src="{thumb($r[thumb],150,450)}" width="50" height="60" alt="{$r[title]}" title="{$r[title]}"></img></a>
